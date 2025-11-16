@@ -1,2 +1,18 @@
 import { Component } from '@angular/core';
-@Component({selector:'app-root', standalone:true, template:`<h1>Angular 17 App</h1>`}) export class AppComponent{}
+import { RouterModule } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterModule],
+  template: `
+    <h1>Gerenciador de Produtos</h1>
+    <nav>
+      <a routerLink="/products">Produtos</a> |
+      <a routerLink="/products/create">Criar Produto</a> |
+      <a routerLink="/orders/create">Comprar Produtos</a>
+    </nav>
+    <router-outlet></router-outlet>
+  `
+})
+export class AppComponent {}
