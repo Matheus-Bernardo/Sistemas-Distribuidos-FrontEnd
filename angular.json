@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "projects": {
+    "angular17-app": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "browser": "src/main.ts",
+            "outputPath": "dist/angular17-app",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "index": "src/index.html",
+            "polyfills": [],
+            "tsConfig": "tsconfig.app.json"
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "angular17-app:build"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}
