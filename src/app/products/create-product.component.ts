@@ -1,20 +1,27 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../services/product.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'create-product',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   template: `
-    <h2>Criar Produto</h2>
+    <h2 style="text-align:center; margin-bottom: 20px;">Criar Produto</h2>
 
     <form (ngSubmit)="save()">
-      <input [(ngModel)]="name" name="name" placeholder="Nome" />
+      <label>Nome</label>
+      <input [(ngModel)]="name" name="name" placeholder="Nome do produto" />
+
+      <label>Descrição</label>
       <input [(ngModel)]="description" name="description" placeholder="Descrição" />
 
+      <label>Preço</label>
       <input [(ngModel)]="price" name="price" type="number" placeholder="Preço" />
-      <input [(ngModel)]="stock" name="stock" type="number" placeholder="Estoque" />
+
+      <label>Estoque</label>
+      <input [(ngModel)]="stock" name="stock" type="number" placeholder="Quantidade em estoque" />
 
       <button type="submit">Salvar</button>
     </form>

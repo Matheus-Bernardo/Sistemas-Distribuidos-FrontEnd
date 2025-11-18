@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../services/product.service';
 import { OrderService } from '../services/order.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'create-order',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,RouterModule],
   template: `
     <h2>Comprar Produtos</h2>
 

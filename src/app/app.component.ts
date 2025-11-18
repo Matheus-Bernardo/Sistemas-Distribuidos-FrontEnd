@@ -7,11 +7,13 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule],
   template: `
     <h1>Gerenciador de Produtos</h1>
+
     <nav>
       <a routerLink="/products">Produtos</a> |
       <a routerLink="/products/create">Criar Produto</a> |
       <a routerLink="/orders/create">Comprar Produtos</a>
     </nav>
+
     <router-outlet></router-outlet>
   `
 })
