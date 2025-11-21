@@ -14,4 +14,20 @@ export class AuthService {
   login(data: { email: string; password: string }) {
     return this.http.post(`${this.base}/login`, data);
   }
+
+  logout() {
+    try {
+      localStorage.removeItem('token');
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  isAuthenticated(): boolean {
+    try {
+      return !!localStorage.getItem('token');
+    } catch (e) {
+      return false;
+    }
+  }
 }
