@@ -103,3 +103,45 @@ button {
 button:hover {
   background: #004999;
 }
+
+/* ======== CARDS GRID (orders/create) ======== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 { margin: 0 0 8px 0; }
+.card .desc { color:#666; font-size:0.95em; margin-bottom:8px }
+.card .price { font-weight:600; margin-bottom:8px }
+.card .stock { font-size:0.9em; color:#888 }
+
+.qty-controls { margin-top:12px; display:flex; gap:8px; align-items:center }
+.qty-controls .qty-input { flex:1; padding:8px }
+.small-btn { width:36px; height:36px; }
+
+/* cart summary */
+.cart-summary { margin-top:18px; display:flex; justify-content:space-between; align-items:center; gap:16px }
+.cart-summary .total { font-weight:700 }
+.cart-summary .checkout-btn { width:auto; padding:10px 18px }
+
+/* simple modal */
+.modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,0.4); display:flex; align-items:center; justify-content:center }
+.modal { background:#fff; padding:18px; border-radius:8px; width:90%; max-width:520px }
+.modal .actions { margin-top:12px; display:flex; gap:8px; justify-content:flex-end }
+
+/* message styles used by auth component */
+.message { padding:8px; border-radius:4px; margin-bottom:12px }
+.message.success { background:#e6f9ef; color:#0a6d3a }
+.message.error { background:#ffe6e6; color:#b30000 }

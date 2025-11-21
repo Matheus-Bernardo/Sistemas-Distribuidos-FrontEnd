@@ -7,7 +7,8 @@ export class OrderService {
 
   constructor(private http: HttpClient) {}
 
-  create(data: any) {
-    return this.http.post(this.base, data);
+  // Send the items array as the request body (backend expects an array of order items)
+  create(items: Array<{ productId: string; quantity: number; price: number }>) {
+    return this.http.post(this.base, items);
   }
 }
