@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.gitignore
+docker-compose*.yml
+*.log
+npm-debug.log*
+.vscode
+/.angular
+
+# include source files (do not ignore src/) so the Docker build can compile the app
